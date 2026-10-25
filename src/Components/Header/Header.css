@@ -1,0 +1,156 @@
+.header {
+  background-color: #0c0f13;
+  padding: 15px 20px;
+  border-bottom: 1px solid #1d2229;
+
+  width: 100%;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 1000;
+}
+
+.header:hover {
+  background-color: #161b20;
+  transition: ease 0.3s;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  max-width: 1400px;
+
+  min-height: 55px;
+
+  margin: 0 auto;
+
+  background-color: rgba(255, 255, 255, 0.02);
+
+  border: 1px solid #1d2229;
+  border-radius: 12px;
+
+  padding: 12px 20px;
+}
+
+.logo {
+  background-image: linear-gradient(
+    to left,
+    rgba(100, 0, 0, 0),
+    rgba(100, 0, 0, 1)
+  );
+
+  font-size: clamp(24px, 3vw, 35px);
+  font-weight: 600;
+  color: #ffffff;
+
+  white-space: nowrap;
+}
+
+.nav-links {
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+
+  gap: clamp(10px, 3vw, 30px);
+
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+
+  margin: 5px;
+
+  color: #b0b8c4;
+
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+}
+
+.header-button .btn-primary {
+  color: white;
+
+  background-color: rgb(128, 255, 98);
+
+  border: none;
+  border-radius: 6px;
+
+  padding: 9px 18px;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  font-weight: 500;
+
+  transition: background-color 0.3s ease;
+}
+
+.header-button .btn-primary:hover {
+  background-color: rgb(192, 255, 58);
+}
+@media (max-width: 700px) {
+  .header {
+    padding: 10px;
+  }
+
+  .header-container {
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 10px;
+  }
+
+  .logo {
+    width: 100%;
+
+    text-align: center;
+  }
+
+  .nav-links {
+    gap: 5px;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+  }
+
+  .nav-links a {
+    margin: 3px;
+
+    font-size: 14px;
+  }
+  .header-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .header-button .btn-primary {
+    width: 100%;
+    max-width: 220px;
+
+    padding: 10px 20px;
+
+    font-size: 14px;
+  }
+}
+@media (max-width: 900px) {
+  .header-button .btn-primary {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+}

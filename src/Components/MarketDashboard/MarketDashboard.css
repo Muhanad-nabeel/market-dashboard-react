@@ -1,0 +1,139 @@
+.market-dashboard {
+  width: 100%;
+  padding: 80px 20px;
+  background: #101418;
+}
+
+.market-dashboard-container {
+  width: min(100%, 1300px);
+  margin: 0 auto;
+}
+
+.market-dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.market-dashboard-label {
+  display: block;
+  margin-bottom: 10px;
+  color: rgb(128, 255, 98);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.market-dashboard h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+}
+
+.market-search {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: min(100%, 320px);
+  padding: 12px 16px;
+  background: #151a20;
+  border: 1px solid #252c34;
+  border-radius: 10px;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.market-search:focus-within {
+  border-color: rgba(128, 255, 98, 0.5);
+  box-shadow: 0 0 0 3px rgba(128, 255, 98, 0.06);
+}
+
+.market-search i {
+  color: #68717d;
+  font-size: 14px;
+}
+
+.market-search input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.market-search input::placeholder {
+  color: #68717d;
+}
+
+.market-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.market-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.market-categories button {
+  padding: 10px 18px;
+
+  border: 1px solid #252c34;
+  border-radius: 8px;
+
+  background: #151a20;
+  color: #8f98a5;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.market-categories button:hover {
+  color: #ffffff;
+  border-color: rgba(128, 255, 98, 0.4);
+}
+
+.market-categories button.active {
+  background: rgb(128, 255, 98);
+  border-color: rgb(128, 255, 98);
+  color: #101418;
+}
+@media (max-width: 900px) {
+  .market-dashboard-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .market-search {
+    width: 100%;
+  }
+
+  .market-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .market-dashboard {
+    padding: 60px 16px;
+  }
+
+  .market-grid {
+    grid-template-columns: 1fr;
+  }
+}
