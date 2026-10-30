@@ -16,12 +16,12 @@ function Hero() {
               src="https://lottie.host/c50db0dd-b692-48e2-ba6a-a22b3cbf54c9/9LuYbOf8TM.lottie"
               background="transparent"
               speed="1"
+              loop={true}
+              autoplay={true}
               style={{
                 width: "300px",
                 height: "300px",
               }}
-              loop
-              autoplay
             ></dotlottie-player>
           </div>
         </div>
